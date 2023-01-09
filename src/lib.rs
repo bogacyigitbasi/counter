@@ -82,7 +82,7 @@ fn decrement<S: HasStateApi>(
     );
 
     ensure!(param < 0, Error::DecrementError);
-    state.counter -= param;
+    state.counter += param;
     Ok(())
 }
 
